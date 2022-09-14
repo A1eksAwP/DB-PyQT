@@ -1,0 +1,8 @@
+2022-08-31 22:36:30,934 CRITICAL server_log_config.py Критическая ошибка
+2022-08-31 22:36:30,935 ERROR server_log_config.py Ошибка
+2022-08-31 22:36:30,935 DEBUG server_log_config.py Отладочная информация
+2022-08-31 22:36:30,935 INFO server_log_config.py Информационное сообщение
+2022-08-31 22:50:35,764 DEBUG server.py Запуск сервера произведён напрямую
+2022-08-31 22:50:35,764 INFO server.py Порт установлен на дефолтный: 7777
+2022-08-31 22:50:42,241 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1661975442.241948, 'user': {'account_name': 'Guest/Default'}}
+2022-08-31 22:50:42,241 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1661975442.241948, 'user': {'account_name': 'Guest/Default'}} от клиента

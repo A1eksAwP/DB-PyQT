@@ -1,0 +1,47 @@
+2022-09-04 20:01:56,202 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:02:13,857 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:02:13,857 INFO server.py Порт установлен на дефолтный: 7777
+2022-09-04 20:02:32,352 ERROR server.py Принято некорректное сообщение от клиента.
+2022-09-04 20:05:20,074 ERROR server.py Принято некорректное сообщение от клиента.
+2022-09-04 20:05:38,628 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662311138.6282656, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:07:16,839 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:07:16,844 INFO server.py Порт установлен на дефолтный: 7777
+2022-09-04 20:07:23,656 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662311243.6566472, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:12:30,162 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:12:30,162 INFO server.py Порт установлен на дефолтный: 7777
+2022-09-04 20:12:34,399 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662311554.3995314, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:12:34,399 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662311554.3995314, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:15:17,614 ERROR server.py Принято некорректное сообщение от клиента.
+2022-09-04 20:19:10,002 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662311949.984761, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:19:10,002 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662311949.984761, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:20:18,628 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662312018.6106253, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:20:18,628 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662312018.6106253, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:30:59,806 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662312659.7881076, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:30:59,806 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662312659.7881076, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:33:06,349 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662312786.3314583, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:33:06,349 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662312786.3314583, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:35:56,396 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662312956.3788068, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:35:56,397 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662312956.3788068, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:36:16,248 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662312976.2304902, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:36:16,248 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662312976.2304902, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:36:51,749 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313011.7322645, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:36:51,750 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313011.7322645, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:37:18,414 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313038.3958855, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:37:18,414 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313038.3958855, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:37:48,389 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313068.3693752, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:37:48,390 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313068.3693752, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:39:00,025 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:39:00,025 INFO server.py Порт установлен на дефолтный: 7777
+2022-09-04 20:39:04,533 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313144.5152357, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:39:04,533 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313144.5152357, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:39:04,550 INFO server.py Вызвана функция: process_client_message с аргументами (<__main__.Server object at 0x00000148723FFAF0>, {'action': 'presence', 'time': 1662313144.5152357, 'user': {'account_name': 'Guest/Default'}}), {}. Вызвано модулем: __main__ из функции: general
+2022-09-04 20:41:28,135 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313288.1170912, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:41:28,135 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313288.1170912, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:41:28,136 INFO server.py Вызвана функция: process_client_message с аргументами (<__main__.Server object at 0x00000148723FFAF0>, {'action': 'presence', 'time': 1662313288.1170912, 'user': {'account_name': 'Guest/Default'}}), {}. Вызвано модулем: __main__ из функции: general
+2022-09-04 20:42:28,766 DEBUG server.py Запуск сервера произведён напрямую
+2022-09-04 20:42:28,767 INFO server.py Порт установлен на дефолтный: 7777
+2022-09-04 20:42:33,683 INFO server.py Вызвана функция: get_message с аргументами (<socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61772)>,), {}. Вызвано модулем: common.utils из функции: general
+2022-09-04 20:42:33,683 INFO server.py Принято сообщение: {'action': 'presence', 'time': 1662313353.6487048, 'user': {'account_name': 'Guest/Default'}}
+2022-09-04 20:42:33,683 DEBUG server.py Разбор сообщения: {'action': 'presence', 'time': 1662313353.6487048, 'user': {'account_name': 'Guest/Default'}} от клиента
+2022-09-04 20:42:33,684 INFO server.py Вызвана функция: process_client_message с аргументами (<__main__.Server object at 0x0000025E3A3EFAF0>, {'action': 'presence', 'time': 1662313353.6487048, 'user': {'account_name': 'Guest/Default'}}), {}. Вызвано модулем: __main__ из функции: general
+2022-09-04 20:42:33,685 INFO server.py Вызвана функция: send_message с аргументами (<socket.socket fd=380, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61772)>, {'response': 200}), {}. Вызвано модулем: common.utils из функции: general
