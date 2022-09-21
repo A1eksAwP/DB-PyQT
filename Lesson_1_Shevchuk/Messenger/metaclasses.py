@@ -58,6 +58,8 @@ class ClientVerifier(type):
         pprint(res_dict)
         global_list, method_list, attr_list = [], [], []
         for key in res_dict:
+            pprint('-' * 30)
+            pprint(key)
             # Пробуем
             try:
                 dis_result = dis.get_instructions(res_dict[key])
@@ -68,6 +70,7 @@ class ClientVerifier(type):
                 # Раз функция разбираем код, получая используемые методы.
                 for instruction in dis_result:
                     print(instruction)
+                    method_list.append(instruction.argval)
                     if instruction.opname == 'LOAD_GLOBAL':
                         if instruction.argval not in global_list:
                             global_list.append(instruction.argval)
@@ -90,11 +93,17 @@ class ClientVerifier(type):
         for command in ('accept', 'listen', 'socket'):
             if command in method_list:
                 raise TypeError('В классе обнаружено использование запрещённого метода')
-        # Вызов get_message или send_message из utils считаем корректным использованием сокетов
 
+        """
+        Мне не удалось через модуль dis найти признаки TCP протокола в клиенте :(
+        """
 
-        # if 'get_message' in method_list or 'send_message' in method_list:
+        # if 'connect' in method_list \
+        #         or 'recv' in method_list \
+        #         or 'send' in method_list \
+        #         or 'close' in method_list:
         #     pass
         # else:
         #     raise TypeError('Отсутствуют вызовы функций, работающих с сокетами.')
+
         super().__init__(res_name, res_bases, res_dict)
