@@ -1,18 +1,35 @@
 """Программа-клиент"""
 
+# import sys
+# import json
+# import socket
+# import time
+# import logging
+# import argparse
+# import threading
+# from logs.config import client_log_config
+# from errors import ReqFieldMissingError, ServerError, IncorrectDataRecivedError
+# from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
+#     RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT, SEND, SENDER, TEXT, \
+#     DESTINATION, EXIT, MIN_AVAILABLE_PORT, MAX_AVAILABLE_PORT
+# # from common.utils import get_message, send_message
+# from common.utils import *
+# from dec import Log
+# from metaclasses import ClientVerifier
+# from descriptors import PortVerifier
+
 import sys
 import json
 import socket
 import time
-import logging
+import dis
 import argparse
+import logging
 import threading
-from logs.config import client_log_config
-from errors import ReqFieldMissingError, ServerError, IncorrectDataRecivedError
-from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
-    RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT, SEND, SENDER, TEXT, \
-    DESTINATION, EXIT, MIN_AVAILABLE_PORT, MAX_AVAILABLE_PORT
-from common.utils import get_message, send_message
+import logs.config.client_log_config
+from common.variables import *
+from common.utils import *
+from errors import IncorrectDataRecivedError, ReqFieldMissingError, ServerError
 from dec import Log
 from metaclasses import ClientVerifier
 from descriptors import PortVerifier
@@ -72,7 +89,7 @@ class ClientSender(threading.Thread, metaclass=ClientVerifier):
         # CL.info(f'Пользователем {account_name} сгенерировано сообщение для отправки: {generate_message}')s
 
     @Log()
-    def user_interactive(self):
+    def run(self):
         """Функция взаимодействия с пользователем, запрашивает команды, отправляет сообщения"""
         self.print_help()
         while True:
@@ -121,9 +138,9 @@ class ClientReader(threading.Thread, metaclass=ClientVerifier):
         super().__init__()
 
     @Log()
-    def message_from_server(self):
+    def run(self):
         # Функция - обработчик сообщений других пользователей, поступающих с сервера
-        # CL.info(f"Функция message_from_server активна")
+        # CL.info(f"Функция run активна")
         while True:
             try:
                 message = get_message(self.sock)
@@ -226,30 +243,15 @@ def main():
     else:
         # Если соединение с сервером установлено корректно,
         # запускаем клиентский процесс приёма сообщений
-
-        # client_reciever = ClientReader(client_name, swap)
-        client_reciever = threading.Thread(target=ClientReader(client_name, swap).message_from_server)
+        client_reciever = ClientReader(client_name, swap)
         client_reciever.daemon = True
-        try:
-            client_reciever.start()
-        except Exception as ex:
-            print(f"Не удалось запустить Демон, т.к.: {ex}")
+        client_reciever.start()
 
         # затем запускаем отправку сообщений и взаимодействие с пользователем.
-
-        # client_sender = ClientSender(client_name, swap)
-        client_sender = threading.Thread(
-            target=ClientSender(
-                client_name,
-                swap,
-                server_address,
-                server_port).user_interactive
-        )
+        client_sender = ClientSender(client_name, swap, server_address, server_port)
         client_sender.daemon = True
-        try:
-            client_sender.start()
-        except Exception as ex:
-            print(f"Не удалось запустить Демон, т.к.: {ex}")
+        client_sender.start()
+
         CL.debug('Запущены процессы')
 
         # Watchdog основной цикл, если один из потоков завершён,
